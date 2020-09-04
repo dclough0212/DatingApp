@@ -21,14 +21,14 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.getValues();
+    // this.getValues();
   }
 
   handleRegisterMode(event: boolean) {
     this.registerMode = event;
   }
 
-  getValues() {
+/*   getValues() {
     this.http.get<Value[]>('http://localhost:5000/api/values').subscribe(
       response => {
         this.values = response;
@@ -37,6 +37,6 @@ export class HomeComponent implements OnInit {
         console.log(error);
       }
     );
-  }
+  } */
 
 }

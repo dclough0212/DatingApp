@@ -48,11 +48,11 @@ namespace DatingApp.API.Controllers
         {
             var userFromRepo = await _repo.Login(userLoginDto.Username, userLoginDto.Password);
 
-            Console.WriteLine($"Testing {userFromRepo.Id}");
+            throw new Exception("Computer says no!");
 
             if (userFromRepo == null)
                 return Unauthorized();
-
+Console.WriteLine($"Testing {userFromRepo.Id}");
             var claims = new [] {
                 new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
                 new Claim(ClaimTypes.Name, userFromRepo.Username)
