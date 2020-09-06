@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
           next => {
             this.router.navigate(['home']);
           }
-        )
+        );
       }
     );
   }
