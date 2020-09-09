@@ -76,6 +76,7 @@ Console.WriteLine($"Testing {userFromRepo.Id}");
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
             Console.WriteLine(token);
+            Console.WriteLine(tokenHandler.WriteToken(token));
             return Ok(new {
                 token = tokenHandler.WriteToken(token)
             });            
